@@ -32,7 +32,7 @@ def transcribe_audio():
     try:
         # Check if the 'audio' file is in the request
         if 'audio' not in request.files:
-            return jsonify({'error': 'No audio file provided'})
+            return jsonify({'error': 'No audio file provided'}), 500
 
         audio_file = request.files['audio']
         audio_file.save("recorded_audio.wav")
@@ -44,7 +44,7 @@ def transcribe_audio():
         return jsonify({'transcription': transcription})
 
     except Exception as e:
-        return jsonify({'error': str(e)})
+        return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=port)
