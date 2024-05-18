@@ -7,11 +7,14 @@ import logging
 
 app = Flask(__name__)
 
+...
+
 # Load environment variables from .env file
 load_dotenv()
 
 # Get the port from the environment variable or use 4000 as default
-# port = int(os.environ.get("PORT", 8080))
+port = int(os.environ.get("PORT", 4000))
+...
 
 # Load the Whisper model for transcription
 model = whisper.load_model("base")
@@ -44,5 +47,4 @@ def transcribe_audio():
         return jsonify({'error': str(e)})
 
 if __name__ == '__main__':
-    logging.info(f"Server started on port {port}")
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=port)
