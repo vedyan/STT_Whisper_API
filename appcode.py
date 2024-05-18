@@ -3,6 +3,7 @@ import os
 import threading
 from dotenv import load_dotenv
 import whisper
+import logging
 
 app = Flask(__name__)
 
@@ -10,7 +11,7 @@ app = Flask(__name__)
 load_dotenv()
 
 # Get the port from the environment variable or use 4000 as default
-port = int(os.environ.get("PORT", 8080))
+# port = int(os.environ.get("PORT", 8080))
 
 # Load the Whisper model for transcription
 model = whisper.load_model("base")
@@ -43,4 +44,5 @@ def transcribe_audio():
         return jsonify({'error': str(e)})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=port)
+    logging.info(f"Server started on port {port}")
+    app.run(host='0.0.0.0', port=8080)
