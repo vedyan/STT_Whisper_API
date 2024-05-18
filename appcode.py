@@ -10,7 +10,7 @@ app = Flask(__name__)
 load_dotenv()
 
 # Get the port from the environment variable or use 4000 as default
-port = int(os.environ.get("PORT", 4000))
+port = int(os.environ.get("PORT", 8080))
 
 # Load the Whisper model for transcription
 model = whisper.load_model("base")
