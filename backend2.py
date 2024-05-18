@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 import os
 import whisper
-from pydub import AudioSegment
+# from pydub import AudioSegment
 from dotenv import load_dotenv
 
 
