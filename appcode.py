@@ -50,6 +50,6 @@ def transcribe_audio():
 #     app.run(host='0.0.0.0', port=port)
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))  # Use a default if PORT isn't set
-    app.run(host='0.0.0.0')
+    port = int(os.environ.get("PORT", 5000))  # Use a default if PORT isn't set
+    app.run(host='0.0.0.0', port=port)
     logging.info(f"Server started on port {port}")
