@@ -23,6 +23,10 @@ def record_audio(filename, duration):
 def index():
     return render_template('index.html')
 
+# Define a function to record audio from the microphone
+def record_audio(filename, duration):
+    os.system(f"arecord -d {duration} -f cd -t wav {filename}")
+
 @app.route('/transcribe', methods=['POST'])
 def transcribe_audio():
     try:
