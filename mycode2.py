@@ -15,10 +15,6 @@ app = Flask(__name__)
 # Load the Whisper model for transcription
 model = whisper.load_model("base")
 
-# Define a function to record audio from the microphone
-def record_audio(filename, duration):
-    os.system(f"arecord -d {duration} -f cd -t wav {filename}")
-
 @app.route('/')
 def index():
     return render_template('index.html')
