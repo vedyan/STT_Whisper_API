@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 import os
-# import threading
+import threading
 from dotenv import load_dotenv
 import whisper
 
