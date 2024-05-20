@@ -1,6 +1,5 @@
-git+https://github.com/openai/whisper.git
-Flask==3.0.3
-pydub==0.25.1
-python-dotenv==1.0.1
-werkzeug==3.0.2
-gunicorn
+# git+https://github.com/openai/whisper.git
+whisper
+flask
+python-dotenv
+werkzeug
