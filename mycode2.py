@@ -4,13 +4,13 @@ import threading
 from dotenv import load_dotenv
 import whisper
 
-app = Flask(__name__)
-
 # Load environment variables from .env file
 load_dotenv()
 
 # Get the port from the environment variable or use 4000 as default
 port = int(os.environ.get("PORT", 4000))
+
+app = Flask(__name__)
 
 # Load the Whisper model for transcription
 model = whisper.load_model("base")
