@@ -1,4 +1,7 @@
-git+https://github.com/openai/whisper.git
+# git+https://github.com/openai/whisper.git
+openai-whisper
+faster-whisper >= 0.10.0
+ffmpeg-python==0.2.0
 pydub==0.25.1
 flask
 python-dotenv
