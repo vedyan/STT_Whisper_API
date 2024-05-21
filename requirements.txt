@@ -3,3 +3,10 @@ pydub==0.25.1
 flask
 python-dotenv
 werkzeug
+jmespath==1.0.1
+python-dateutil==2.9.0.post0
+six==1.16.0
+urllib3==2.2.1
+Wave==0.0.2
+python-dotenv==1.0.1
+requests==2.31.0
