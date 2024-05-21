@@ -1,4 +1,5 @@
 git+https://github.com/openai/whisper.git
+pydub==0.25.1
 flask
 python-dotenv
 werkzeug
